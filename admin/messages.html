@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Shariar Arafat Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html">
+                        <i class="fas fa-blog"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html" class="active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        <span>View Site</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="collapse-sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Messages</h1>
+                </div>
+                
+                <div class="user-dropdown">
+                    <img src="../img/profile.jpg" alt="Shariar Arafat">
+                    <span>Shariar Arafat</span>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="user-dropdown-content">
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            Profile
+                        </a>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Messages Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Inbox Messages</h2>
+                    <div class="message-actions">
+                        <select id="statusFilter">
+                            <option value="all">All Messages</option>
+                            <option value="unread">Unread</option>
+                            <option value="read">Read</option>
+                            <option value="archived">Archived</option>
+                        </select>
+                        <button id="deleteSelectedBtn" class="danger-btn" disabled>
+                            <i class="fas fa-trash"></i> Delete Selected
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="message-list">
+                    <div class="message-item unread">
+                        <div class="message-checkbox">
+                            <input type="checkbox" class="message-select">
+                        </div>
+                        <div class="message-status">
+                            <span class="status-indicator"></span>
+                        </div>
+                        <div class="message-sender">
+                            <p>John Smith</p>
+                            <span class="message-email">john.smith@example.com</span>
+                        </div>
+                        <div class="message-preview">
+                            <p>Website Development Opportunity - I'm interested in discussing a potential collaboration on an e-commerce project...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 12, 2023</p>
+                            <span>10:45 AM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="action-btn view-message">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn archive-message">
+                                <i class="fas fa-archive"></i>
+                            </button>
+                            <button class="action-btn delete-message">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-item read">
+                        <div class="message-checkbox">
+                            <input type="checkbox" class="message-select">
+                        </div>
+                        <div class="message-status">
+                            <span class="status-indicator read"></span>
+                        </div>
+                        <div class="message-sender">
+                            <p>Sarah Johnson</p>
+                            <span class="message-email">sarah.j@example.com</span>
+                        </div>
+                        <div class="message-preview">
+                            <p>Digital Marketing Inquiry - I was impressed by your portfolio and wanted to inquire about your digital marketing...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 10, 2023</p>
+                            <span>2:30 PM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="action-btn view-message">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn archive-message">
+                                <i class="fas fa-archive"></i>
+                            </button>
+                            <button class="action-btn delete-message">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-item unread">
+                        <div class="message-checkbox">
+                            <input type="checkbox" class="message-select">
+                        </div>
+                        <div class="message-status">
+                            <span class="status-indicator"></span>
+                        </div>
+                        <div class="message-sender">
+                            <p>Alex Thompson</p>
+                            <span class="message-email">alex.t@example.com</span>
+                        </div>
+                        <div class="message-preview">
+                            <p>Fusion Gadget Inquiry - I recently came across your Fusion Gadget project and was very impressed. I'd like to learn more...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 8, 2023</p>
+                            <span>9:15 AM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="action-btn view-message">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn archive-message">
+                                <i class="fas fa-archive"></i>
+                            </button>
+                            <button class="action-btn delete-message">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-item archived">
+                        <div class="message-checkbox">
+                            <input type="checkbox" class="message-select">
+                        </div>
+                        <div class="message-status">
+                            <span class="status-indicator archived"></span>
+                        </div>
+                        <div class="message-sender">
+                            <p>Michael Brown</p>
+                            <span class="message-email">m.brown@example.com</span>
+                        </div>
+                        <div class="message-preview">
+                            <p>UI/UX Design Question - I have some questions about your approach to UI/UX design. Would you be available for a quick call...</p>
+                        </div>
+                        <div class="message-date">
+                            <p>June 5, 2023</p>
+                            <span>4:20 PM</span>
+                        </div>
+                        <div class="message-actions">
+                            <button class="action-btn view-message">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn unarchive-message">
+                                <i class="fas fa-inbox"></i>
+                            </button>
+                            <button class="action-btn delete-message">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Message Detail Modal -->
+            <div id="messageModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Message Details</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="message-detail-header">
+                            <div class="sender-info">
+                                <h4 id="modalSenderName">John Smith</h4>
+                                <p id="modalSenderEmail">john.smith@example.com</p>
+                            </div>
+                            <div class="message-date">
+                                <p id="modalDate">June 12, 2023</p>
+                                <span id="modalTime">10:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="message-subject">
+                            <h4 id="modalSubject">Website Development Opportunity</h4>
+                        </div>
+                        <div class="message-content">
+                            <p id="modalMessage">
+                                Dear Shariar,<br><br>
+                                
+                                I'm writing to express my interest in collaborating with you on an e-commerce project. After reviewing your portfolio, particularly the Fusion Gadget project, I believe your skills and expertise would be a perfect match for what we're looking to accomplish.<br><br>
+                                
+                                Our company is looking to develop a modern e-commerce platform for handcrafted products, with a focus on user experience and mobile responsiveness. Your portfolio demonstrates a strong command of these areas.<br><br>
+                                
+                                Would you be available for a brief call next week to discuss this opportunity further? I'm flexible with timing and can work around your schedule.<br><br>
+                                
+                                Looking forward to your response.<br><br>
+                                
+                                Best regards,<br>
+                                John Smith<br>
+                                Creative Director<br>
+                                Artisan Marketplace Inc.<br>
+                                Phone: (555) 123-4567
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="replyBtn" class="primary-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                        <button id="archiveBtn" class="secondary-btn">
+                            <i class="fas fa-archive"></i> Archive
+                        </button>
+                        <button id="deleteBtn" class="danger-btn">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Additional styles for messages page */
+        .message-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message-item {
+            display: grid;
+            grid-template-columns: auto auto 200px 1fr 120px auto;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: var(--card-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .message-item:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .message-item.unread {
+            border-left: 3px solid var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .message-item.read {
+            border-left: 3px solid transparent;
+            opacity: 0.85;
+        }
+        
+        .message-item.archived {
+            border-left: 3px solid #9CA3AF;
+            opacity: 0.7;
+        }
+        
+        .message-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .message-checkbox input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .status-indicator.read {
+            background-color: #9CA3AF;
+        }
+        
+        .status-indicator.archived {
+            background-color: #4B5563;
+        }
+        
+        .message-sender p {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .message-email {
+            font-size: 0.8rem;
+            color: #6B7280;
+        }
+        
+        .message-preview p {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .message-date {
+            text-align: right;
+        }
+        
+        .message-date p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .message-date span {
+            font-size: 0.8rem;
+            color: #6B7280;
+        }
+        
+        .message-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .action-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            background-color: #F3F4F6;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .section-header .message-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-header select {
+            padding: 8px 12px;
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .danger-btn {
+            background-color: #EF4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s ease;
+        }
+        
+        .danger-btn:hover {
+            background-color: #DC2626;
+        }
+        
+        .danger-btn:disabled {
+            background-color: #F3F4F6;
+            color: #9CA3AF;
+            cursor: not-allowed;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--background-color);
+            margin: 50px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: modalopen 0.4s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-60px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6B7280;
+        }
+        
+        .close-modal:hover {
+            color: #111827;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .message-detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .sender-info h4 {
+            margin: 0 0 5px 0;
+        }
+        
+        .sender-info p {
+            margin: 0;
+            color: #6B7280;
+        }
+        
+        .message-subject h4 {
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .message-content p {
+            line-height: 1.6;
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 20px;
+            border-top: 1px solid #E5E7EB;
+            gap: 10px;
+        }
+        
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .primary-btn:hover {
+            background-color: #4338CA;
+        }
+        
+        .secondary-btn {
+            background-color: #E5E7EB;
+            color: #374151;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .secondary-btn:hover {
+            background-color: #D1D5DB;
+        }
+    </style>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for authentication
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }
+            
+            // Message selection functionality
+            const messageCheckboxes = document.querySelectorAll('.message-select');
+            const deleteSelectedBtn = document.getElementById('deleteSelectedBtn');
+            
+            messageCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checked = document.querySelectorAll('.message-select:checked');
+                    deleteSelectedBtn.disabled = checked.length === 0;
+                });
+            });
+            
+            deleteSelectedBtn.addEventListener('click', function() {
+                const checked = document.querySelectorAll('.message-select:checked');
+                
+                if (confirm(`Are you sure you want to delete ${checked.length} message(s)?`)) {
+                    checked.forEach(checkbox => {
+                        checkbox.closest('.message-item').remove();
+                    });
+                    
+                    this.disabled = true;
+                }
+            });
+            
+            // Message filtering
+            const statusFilter = document.getElementById('statusFilter');
+            const messageItems = document.querySelectorAll('.message-item');
+            
+            statusFilter.addEventListener('change', function() {
+                const selectedValue = this.value;
+                
+                messageItems.forEach(item => {
+                    if (selectedValue === 'all') {
+                        item.style.display = 'grid';
+                    } else {
+                        item.style.display = item.classList.contains(selectedValue) ? 'grid' : 'none';
+                    }
+                });
+            });
+            
+            // Modal functionality
+            const messageModal = document.getElementById('messageModal');
+            const closeModal = document.querySelector('.close-modal');
+            const viewButtons = document.querySelectorAll('.view-message');
+            
+            // Modal data elements
+            const modalSenderName = document.getElementById('modalSenderName');
+            const modalSenderEmail = document.getElementById('modalSenderEmail');
+            const modalDate = document.getElementById('modalDate');
+            const modalTime = document.getElementById('modalTime');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const messageItem = this.closest('.message-item');
+                    const senderName = messageItem.querySelector('.message-sender p').textContent;
+                    const senderEmail = messageItem.querySelector('.message-email').textContent;
+                    const date = messageItem.querySelector('.message-date p').textContent;
+                    const time = messageItem.querySelector('.message-date span').textContent;
+                    
+                    // Update modal data
+                    modalSenderName.textContent = senderName;
+                    modalSenderEmail.textContent = senderEmail;
+                    modalDate.textContent = date;
+                    modalTime.textContent = time;
+                    
+                    // Mark as read if unread
+                    if (messageItem.classList.contains('unread')) {
+                        messageItem.classList.remove('unread');
+                        messageItem.classList.add('read');
+                        messageItem.querySelector('.status-indicator').classList.add('read');
+                    }
+                    
+                    // Show modal
+                    messageModal.style.display = 'block';
+                });
+            });
+            
+            closeModal.addEventListener('click', function() {
+                messageModal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === messageModal) {
+                    messageModal.style.display = 'none';
+                }
+            });
+            
+            // Archive/Unarchive functionality
+            const archiveButtons = document.querySelectorAll('.archive-message');
+            const unarchiveButtons = document.querySelectorAll('.unarchive-message');
+            
+            archiveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const messageItem = this.closest('.message-item');
+                    messageItem.classList.remove('unread', 'read');
+                    messageItem.classList.add('archived');
+                    
+                    const statusIndicator = messageItem.querySelector('.status-indicator');
+                    statusIndicator.classList.remove('read');
+                    statusIndicator.classList.add('archived');
+                    
+                    // Replace archive button with unarchive button
+                    this.innerHTML = '<i class="fas fa-inbox"></i>';
+                    this.classList.remove('archive-message');
+                    this.classList.add('unarchive-message');
+                    
+                    // Add event listener to new unarchive button
+                    this.addEventListener('click', handleUnarchive);
+                });
+            });
+            
+            unarchiveButtons.forEach(button => {
+                button.addEventListener('click', handleUnarchive);
+            });
+            
+            function handleUnarchive() {
+                const messageItem = this.closest('.message-item');
+                messageItem.classList.remove('archived');
+                messageItem.classList.add('read');
+                
+                const statusIndicator = messageItem.querySelector('.status-indicator');
+                statusIndicator.classList.remove('archived');
+                statusIndicator.classList.add('read');
+                
+                // Replace unarchive button with archive button
+                this.innerHTML = '<i class="fas fa-archive"></i>';
+                this.classList.remove('unarchive-message');
+                this.classList.add('archive-message');
+                
+                // Add event listener to new archive button
+                this.removeEventListener('click', handleUnarchive);
+                this.addEventListener('click', function() {
+                    // ... archive functionality (duplicate code)
+                });
+            }
+            
+            // Delete message functionality
+            const deleteButtons = document.querySelectorAll('.delete-message');
+            
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const messageItem = this.closest('.message-item');
+                    const senderName = messageItem.querySelector('.message-sender p').textContent;
+                    
+                    if (confirm(`Are you sure you want to delete the message from ${senderName}?`)) {
+                        messageItem.remove();
+                    }
+                });
+            });
+            
+            // Modal delete button
+            const modalDeleteBtn = document.getElementById('deleteBtn');
+            
+            modalDeleteBtn.addEventListener('click', function() {
+                const senderName = modalSenderName.textContent;
+                
+                if (confirm(`Are you sure you want to delete the message from ${senderName}?`)) {
+                    // Find and remove the corresponding message item
+                    messageItems.forEach(item => {
+                        const itemSenderName = item.querySelector('.message-sender p').textContent;
+                        if (itemSenderName === senderName) {
+                            item.remove();
+                        }
+                    });
+                    
+                    // Close the modal
+                    messageModal.style.display = 'none';
+                }
+            });
+            
+            // Modal archive button
+            const modalArchiveBtn = document.getElementById('archiveBtn');
+            
+            modalArchiveBtn.addEventListener('click', function() {
+                const senderName = modalSenderName.textContent;
+                
+                // Find and archive the corresponding message item
+                messageItems.forEach(item => {
+                    const itemSenderName = item.querySelector('.message-sender p').textContent;
+                    if (itemSenderName === senderName) {
+                        item.classList.remove('unread', 'read');
+                        item.classList.add('archived');
+                        
+                        const statusIndicator = item.querySelector('.status-indicator');
+                        statusIndicator.classList.remove('read');
+                        statusIndicator.classList.add('archived');
+                        
+                        const archiveBtn = item.querySelector('.archive-message');
+                        if (archiveBtn) {
+                            archiveBtn.innerHTML = '<i class="fas fa-inbox"></i>';
+                            archiveBtn.classList.remove('archive-message');
+                            archiveBtn.classList.add('unarchive-message');
+                        }
+                    }
+                });
+                
+                // Update modal button text
+                this.innerHTML = '<i class="fas fa-inbox"></i> Unarchive';
+                this.id = 'unarchiveBtn';
+            });
+            
+            // Reply functionality (placeholder)
+            const replyBtn = document.getElementById('replyBtn');
+            
+            replyBtn.addEventListener('click', function() {
+                const senderName = modalSenderName.textContent;
+                alert(`Reply functionality would open a compose window addressed to ${senderName}`);
+            });
+        });
+        
+        // Sidebar toggle functionality
+        const body = document.querySelector('.admin-container');
+        const collapseSidebarBtn = document.querySelector('.collapse-sidebar');
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
+        
+        if (collapseSidebarBtn) {
+            collapseSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('collapsed');
+                localStorage.setItem('sidebarCollapsed', body.classList.contains('collapsed'));
+            });
+        }
+        
+        if (toggleSidebarBtn) {
+            toggleSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Check if sidebar was collapsed previously
+        if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            body.classList.add('collapsed');
+        }
+        
+        // User dropdown toggle
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        if (userDropdown) {
+            userDropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        }
+        
+        // Logout functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            });
+        }
+    </script>
+</body>
+</html> 

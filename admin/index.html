@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Shariar Arafat Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html" class="active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html">
+                        <i class="fas fa-blog"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        <span>View Site</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="collapse-sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Dashboard</h1>
+                </div>
+                
+                <div class="user-dropdown">
+                    <img src="../img/profile.jpg" alt="Shariar Arafat">
+                    <span>Shariar Arafat</span>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="user-dropdown-content">
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            Profile
+                        </a>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <div class="card-icon projects">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Projects</h3>
+                        <p>4</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon blogs">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Blog Posts</h3>
+                        <p>3</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon files">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Files</h3>
+                        <p>12</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon messages">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Messages</h3>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Messages -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Messages</h2>
+                    <a href="messages.html" class="btn primary-btn">View All</a>
+                </div>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date</th>
+                            <th>Message</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ahmed Hossain</td>
+                            <td>ahmed@example.com</td>
+                            <td>2023-06-10</td>
+                            <td>I would like to discuss a potential project...</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="message-details.html?id=1" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="1">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sarah Khan</td>
+                            <td>sarah@example.com</td>
+                            <td>2023-06-08</td>
+                            <td>Your portfolio is very impressive! I'd like to...</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="message-details.html?id=2" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="2">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Raisul Islam Khan</td>
+                            <td>raisul@example.com</td>
+                            <td>2023-06-05</td>
+                            <td>Great work on the recent project! I have some...</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="message-details.html?id=3" class="action-btn view">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="3">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Recent Projects -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Projects</h2>
+                    <a href="projects.html" class="btn primary-btn">Manage Projects</a>
+                </div>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fusion Gadget</td>
+                            <td>E-commerce startup focusing on low-budget electronic gadgets</td>
+                            <td>2023-05-15</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="edit-project.html?id=1" class="action-btn edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="1">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Supernatural Village Tales</td>
+                            <td>Creating anime based on supernatural village tales</td>
+                            <td>2023-04-22</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="edit-project.html?id=2" class="action-btn edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="2">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Movie Explanation Channel</td>
+                            <td>YouTube channel dedicated to explaining movies</td>
+                            <td>2023-03-10</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="edit-project.html?id=3" class="action-btn edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <button class="action-btn delete" data-id="3">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <a href="add-project.html" class="dashboard-card">
+                        <div class="card-icon projects">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Add New Project</h3>
+                            <p>Create a new project to showcase</p>
+                        </div>
+                    </a>
+                    
+                    <a href="add-blog.html" class="dashboard-card">
+                        <div class="card-icon blogs">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Write New Blog</h3>
+                            <p>Share your knowledge and insights</p>
+                        </div>
+                    </a>
+                    
+                    <a href="files.html" class="dashboard-card">
+                        <div class="card-icon files">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Upload Files</h3>
+                            <p>Add images, documents, or PDFs</p>
+                        </div>
+                    </a>
+                    
+                    <a href="profile.html" class="dashboard-card">
+                        <div class="card-icon" style="background-color: #8B5CF6;">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Update Profile</h3>
+                            <p>Keep your information up to date</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for authentication
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }
+        });
+        
+        // Sidebar toggle functionality
+        const body = document.querySelector('.admin-container');
+        const collapseSidebarBtn = document.querySelector('.collapse-sidebar');
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
+        
+        if (collapseSidebarBtn) {
+            collapseSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('collapsed');
+                
+                // Store the state in localStorage
+                if (body.classList.contains('collapsed')) {
+                    localStorage.setItem('sidebarCollapsed', 'true');
+                } else {
+                    localStorage.setItem('sidebarCollapsed', 'false');
+                }
+            });
+        }
+        
+        if (toggleSidebarBtn) {
+            toggleSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Check if sidebar was collapsed previously
+        if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            body.classList.add('collapsed');
+        }
+        
+        // User dropdown toggle
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        if (userDropdown) {
+            userDropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!userDropdown.contains(e.target)) {
+                    userDropdown.classList.remove('active');
+                }
+            });
+        }
+        
+        // Logout functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Clear authentication
+                sessionStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('isLoggedIn');
+                
+                // Redirect to login page
+                window.location.href = 'login.html';
+            });
+        }
+        
+        // Delete button functionality (for demonstration)
+        const deleteButtons = document.querySelectorAll('.action-btn.delete');
+        
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const row = this.closest('tr');
+                
+                if (confirm('Are you sure you want to delete this item?')) {
+                    // In a real application, you would send a request to the server
+                    // For now, we'll just remove the row
+                    row.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

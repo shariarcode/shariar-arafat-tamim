@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Shariar Arafat Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html">
+                        <i class="fas fa-blog"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html" class="active">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        <span>View Site</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="collapse-sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Education Timeline</h1>
+                </div>
+                
+                <div class="user-dropdown">
+                    <img src="../img/profile.jpg" alt="Shariar Arafat">
+                    <span>Shariar Arafat</span>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="user-dropdown-content">
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            Profile
+                        </a>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Management -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Manage Education History</h2>
+                    <button id="addEducationBtn" class="primary-btn">
+                        <i class="fas fa-plus"></i> Add Education
+                    </button>
+                </div>
+                
+                <div class="education-list">
+                    <!-- Degree 1 -->
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="education-degree">
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <span class="institution">University of Technology</span>
+                            </div>
+                            <div class="education-year">
+                                <span>2018 - 2022</span>
+                            </div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <p>Graduated with honors, specializing in software development and data structures. Participated in various hackathons and coding competitions. Final project focused on developing a responsive e-commerce platform.</p>
+                            <ul class="education-highlights">
+                                <li>Dean's List: 7 consecutive semesters</li>
+                                <li>GPA: 3.85/4.0</li>
+                                <li>Relevant coursework: Algorithms, Database Systems, Web Development, Mobile App Development</li>
+                            </ul>
+                            <div class="education-actions">
+                                <button class="action-btn edit-education">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="action-btn delete-education">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Degree 2 -->
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="education-degree">
+                                <h3>Diploma in Digital Marketing</h3>
+                                <span class="institution">Digital Marketing Institute</span>
+                            </div>
+                            <div class="education-year">
+                                <span>2021 - 2022</span>
+                            </div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <p>Specialized certification in digital marketing strategies, SEO, content marketing, and social media management. Completed with distinction.</p>
+                            <ul class="education-highlights">
+                                <li>Capstone Project: Developed comprehensive digital marketing strategy for a local business</li>
+                                <li>Certification: Google Analytics, Google Ads</li>
+                            </ul>
+                            <div class="education-actions">
+                                <button class="action-btn edit-education">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="action-btn delete-education">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course -->
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="education-degree">
+                                <h3>UI/UX Design Masterclass</h3>
+                                <span class="institution">Design Academy Online</span>
+                            </div>
+                            <div class="education-year">
+                                <span>2020</span>
+                            </div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <p>Intensive course focusing on user interface and user experience design principles, wireframing, prototyping, and usability testing.</p>
+                            <ul class="education-highlights">
+                                <li>Tools learned: Figma, Adobe XD, Sketch</li>
+                                <li>Final Project: Created high-fidelity mockups for a mobile banking app</li>
+                            </ul>
+                            <div class="education-actions">
+                                <button class="action-btn edit-education">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="action-btn delete-education">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add/Edit Education Modal -->
+            <div id="educationModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modalTitle">Add Education</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="educationForm">
+                            <input type="hidden" id="educationId">
+                            
+                            <div class="form-group">
+                                <label for="degreeName">Degree/Course Name:</label>
+                                <input type="text" id="degreeName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="institution">Institution:</label>
+                                <input type="text" id="institution" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="startYear">Start Year:</label>
+                                    <input type="number" id="startYear" min="1990" max="2030" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="endYear">End Year:</label>
+                                    <input type="number" id="endYear" min="1990" max="2030">
+                                    <small>Leave blank if ongoing</small>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea id="description" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Highlights (one per line):</label>
+                                <textarea id="highlights" rows="4" placeholder="GPA: 3.85/4.0
+Relevant coursework: Algorithms, Database Systems
+President of Computer Science Club"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="secondary-btn" id="cancelBtn">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button type="button" class="primary-btn" id="saveEducationBtn">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Additional styles for education page */
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .education-item {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .education-degree h3 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+        
+        .institution {
+            color: #6B7280;
+            font-size: 0.9rem;
+        }
+        
+        .education-year {
+            background-color: #F3F4F6;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .education-content p {
+            margin-top: 0;
+            line-height: 1.6;
+        }
+        
+        .education-highlights {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .education-highlights li {
+            margin-bottom: 5px;
+        }
+        
+        .education-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .action-btn {
+            background-color: #F3F4F6;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn.edit-education {
+            color: #4338CA;
+        }
+        
+        .action-btn.edit-education:hover {
+            background-color: #EEF2FF;
+        }
+        
+        .action-btn.delete-education {
+            color: #EF4444;
+        }
+        
+        .action-btn.delete-education:hover {
+            background-color: #FEE2E2;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: var(--background-color);
+            margin: 50px auto;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: modalopen 0.4s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-60px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6B7280;
+        }
+        
+        .close-modal:hover {
+            color: #111827;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--input-color);
+            color: var(--text-color);
+        }
+        
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #6B7280;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 20px;
+            border-top: 1px solid #E5E7EB;
+            gap: 10px;
+        }
+        
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s ease;
+        }
+        
+        .primary-btn:hover {
+            background-color: #4338CA;
+        }
+        
+        .secondary-btn {
+            background-color: #E5E7EB;
+            color: #374151;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .secondary-btn:hover {
+            background-color: #D1D5DB;
+        }
+    </style>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for authentication
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }
+            
+            // Modal elements
+            const educationModal = document.getElementById('educationModal');
+            const closeModal = document.querySelector('.close-modal');
+            const addEducationBtn = document.getElementById('addEducationBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const saveEducationBtn = document.getElementById('saveEducationBtn');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            // Form elements
+            const educationForm = document.getElementById('educationForm');
+            const educationId = document.getElementById('educationId');
+            const degreeName = document.getElementById('degreeName');
+            const institution = document.getElementById('institution');
+            const startYear = document.getElementById('startYear');
+            const endYear = document.getElementById('endYear');
+            const description = document.getElementById('description');
+            const highlights = document.getElementById('highlights');
+            
+            // Add education button
+            addEducationBtn.addEventListener('click', function() {
+                modalTitle.textContent = 'Add Education';
+                educationId.value = '';
+                educationForm.reset();
+                educationModal.style.display = 'block';
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                educationModal.style.display = 'none';
+            });
+            
+            cancelBtn.addEventListener('click', function() {
+                educationModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === educationModal) {
+                    educationModal.style.display = 'none';
+                }
+            });
+            
+            // Edit buttons
+            const editButtons = document.querySelectorAll('.edit-education');
+            
+            editButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    // Get education item
+                    const educationItem = this.closest('.education-item');
+                    const degree = educationItem.querySelector('.education-degree h3').textContent;
+                    const inst = educationItem.querySelector('.institution').textContent;
+                    const yearRange = educationItem.querySelector('.education-year span').textContent;
+                    const desc = educationItem.querySelector('.education-content p').textContent;
+                    
+                    // Get highlights
+                    const highlightsElements = educationItem.querySelectorAll('.education-highlights li');
+                    let highlightsText = '';
+                    
+                    highlightsElements.forEach(li => {
+                        highlightsText += li.textContent + '\n';
+                    });
+                    
+                    // Extract years
+                    let start = '';
+                    let end = '';
+                    
+                    if (yearRange.includes('-')) {
+                        const years = yearRange.split('-').map(y => y.trim());
+                        start = years[0];
+                        end = years[1];
+                    } else {
+                        start = yearRange.trim();
+                    }
+                    
+                    // Populate modal
+                    modalTitle.textContent = 'Edit Education';
+                    educationId.value = index;
+                    degreeName.value = degree;
+                    institution.value = inst;
+                    startYear.value = start;
+                    endYear.value = end;
+                    description.value = desc;
+                    highlights.value = highlightsText.trim();
+                    
+                    // Show modal
+                    educationModal.style.display = 'block';
+                });
+            });
+            
+            // Delete buttons
+            const deleteButtons = document.querySelectorAll('.delete-education');
+            
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const educationItem = this.closest('.education-item');
+                    const degree = educationItem.querySelector('.education-degree h3').textContent;
+                    
+                    if (confirm(`Are you sure you want to delete "${degree}"?`)) {
+                        educationItem.remove();
+                    }
+                });
+            });
+            
+            // Save education
+            saveEducationBtn.addEventListener('click', function() {
+                // Validate form
+                if (!educationForm.checkValidity()) {
+                    alert('Please fill out all required fields.');
+                    return;
+                }
+                
+                // Get form values
+                const id = educationId.value;
+                const degree = degreeName.value;
+                const inst = institution.value;
+                const start = startYear.value;
+                const end = endYear.value;
+                const desc = description.value;
+                
+                // Format year display
+                let yearDisplay = start;
+                if (end) {
+                    yearDisplay += ' - ' + end;
+                }
+                
+                // Process highlights
+                const highlightsArray = highlights.value.split('\n').filter(h => h.trim() !== '');
+                let highlightsHTML = '';
+                
+                if (highlightsArray.length > 0) {
+                    highlightsHTML = '<ul class="education-highlights">';
+                    highlightsArray.forEach(highlight => {
+                        highlightsHTML += `<li>${highlight}</li>`;
+                    });
+                    highlightsHTML += '</ul>';
+                }
+                
+                // Create or update education item
+                const educationHTML = `
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="education-degree">
+                                <h3>${degree}</h3>
+                                <span class="institution">${inst}</span>
+                            </div>
+                            <div class="education-year">
+                                <span>${yearDisplay}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <p>${desc}</p>
+                            ${highlightsHTML}
+                            <div class="education-actions">
+                                <button class="action-btn edit-education">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="action-btn delete-education">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Add new education or update existing
+                const educationList = document.querySelector('.education-list');
+                
+                if (id === '') {
+                    // Add new
+                    educationList.insertAdjacentHTML('afterbegin', educationHTML);
+                } else {
+                    // Update existing
+                    const educationItems = document.querySelectorAll('.education-item');
+                    if (educationItems[id]) {
+                        educationItems[id].outerHTML = educationHTML;
+                    }
+                }
+                
+                // Close modal
+                educationModal.style.display = 'none';
+                
+                // Reattach event listeners (for new or updated elements)
+                attachEventListeners();
+                
+                // Show confirmation
+                alert(id === '' ? 'Education added successfully!' : 'Education updated successfully!');
+            });
+            
+            function attachEventListeners() {
+                // Reattach edit button listeners
+                document.querySelectorAll('.edit-education').forEach((button, index) => {
+                    button.addEventListener('click', function() {
+                        // ... (edit functionality code)
+                    });
+                });
+                
+                // Reattach delete button listeners
+                document.querySelectorAll('.delete-education').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const educationItem = this.closest('.education-item');
+                        const degree = educationItem.querySelector('.education-degree h3').textContent;
+                        
+                        if (confirm(`Are you sure you want to delete "${degree}"?`)) {
+                            educationItem.remove();
+                        }
+                    });
+                });
+            }
+        });
+        
+        // Sidebar toggle functionality
+        const body = document.querySelector('.admin-container');
+        const collapseSidebarBtn = document.querySelector('.collapse-sidebar');
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
+        
+        if (collapseSidebarBtn) {
+            collapseSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('collapsed');
+                localStorage.setItem('sidebarCollapsed', body.classList.contains('collapsed'));
+            });
+        }
+        
+        if (toggleSidebarBtn) {
+            toggleSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Check if sidebar was collapsed previously
+        if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            body.classList.add('collapsed');
+        }
+        
+        // User dropdown toggle
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        if (userDropdown) {
+            userDropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        }
+        
+        // Logout functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            });
+        }
+    </script>
+</body>
+</html> 

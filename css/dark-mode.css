@@ -1,0 +1,102 @@
+/* Dark Mode Styles */
+.dark-mode {
+    --background-color: #111827;
+    --text-color: #F9FAFB;
+    --light-text-color: #D1D5DB;
+    --card-color: #1F2937;
+    --white: #1F2937;
+}
+
+.dark-mode header {
+    background-color: #1F2937;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .nav-links a {
+    color: #F9FAFB;
+}
+
+.dark-mode .dark-mode-toggle {
+    background-color: #374151;
+}
+
+.dark-mode .fa-moon {
+    display: none;
+}
+
+.dark-mode .fa-sun {
+    display: block;
+    color: #F9FAFB;
+}
+
+.dark-mode .mobile-menu-btn span {
+    background-color: #F9FAFB;
+}
+
+.dark-mode .project-card,
+.dark-mode .service-card,
+.dark-mode .blog-card,
+.dark-mode .testimonial,
+.dark-mode .contact-form,
+.dark-mode .skill-item,
+.dark-mode .timeline-content {
+    background-color: #1F2937;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .service-icon {
+    background-color: #374151;
+}
+
+.dark-mode .profile-img {
+    border-color: var(--primary-color);
+}
+
+.dark-mode .section-heading h2,
+.dark-mode .timeline-content h3,
+.dark-mode .service-card h3,
+.dark-mode .project-content h3 {
+    color: var(--primary-color);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+    background-color: #374151;
+    border-color: #4B5563;
+    color: #F9FAFB;
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+    color: #9CA3AF;
+}
+
+.dark-mode .prev-btn,
+.dark-mode .next-btn {
+    background-color: #374151;
+    color: #F9FAFB;
+}
+
+.dark-mode footer {
+    background-color: #111827;
+}
+
+/* Transition for smooth mode switching */
+body,
+header,
+.nav-links a,
+.dark-mode-toggle,
+.project-card,
+.service-card,
+.blog-card,
+.testimonial,
+.contact-form,
+.skill-item,
+.timeline-content,
+.form-group input,
+.form-group textarea,
+.prev-btn,
+.next-btn,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 

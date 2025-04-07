@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager - Shariar Arafat Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html">
+                        <i class="fas fa-blog"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html" class="active">
+                        <i class="fas fa-file-alt"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        <span>View Site</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="collapse-sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>File Manager</h1>
+                </div>
+                
+                <div class="user-dropdown">
+                    <img src="../img/profile.jpg" alt="Shariar Arafat">
+                    <span>Shariar Arafat</span>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="user-dropdown-content">
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            Profile
+                        </a>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- File Upload Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Upload Files</h2>
+                </div>
+                
+                <div class="file-upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop Files or Click to Upload</p>
+                    <small>Supported: PDF, DOCX, JPG, JPEG, PNG, GIF (Max. 10MB)</small>
+                    <input type="file" id="fileUpload" multiple>
+                </div>
+            </div>
+            
+            <!-- File Browser -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>My Files</h2>
+                    <div class="filter-options">
+                        <select id="fileTypeFilter">
+                            <option value="all">All Files</option>
+                            <option value="image">Images</option>
+                            <option value="document">Documents</option>
+                        </select>
+                        <input type="text" id="searchFiles" placeholder="Search files...">
+                    </div>
+                </div>
+                
+                <div class="uploaded-files">
+                    <!-- Images -->
+                    <div class="file-item">
+                        <div class="file-preview">
+                            <img src="../img/profile.jpg" alt="Profile Image">
+                        </div>
+                        <div class="file-info">
+                            <p class="file-name">profile.jpg</p>
+                            <span class="file-size">240 KB</span>
+                        </div>
+                        <div class="file-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="file-item">
+                        <div class="file-preview">
+                            <img src="../img/fusion-gadget.jpg" alt="Fusion Gadget">
+                        </div>
+                        <div class="file-info">
+                            <p class="file-name">fusion-gadget.jpg</p>
+                            <span class="file-size">350 KB</span>
+                        </div>
+                        <div class="file-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- PDFs -->
+                    <div class="file-item">
+                        <div class="file-preview pdf">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-info">
+                            <p class="file-name">resume-shariar-arafat.pdf</p>
+                            <span class="file-size">890 KB</span>
+                        </div>
+                        <div class="file-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Documents -->
+                    <div class="file-item">
+                        <div class="file-preview document">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-info">
+                            <p class="file-name">project-proposal.docx</p>
+                            <span class="file-size">480 KB</span>
+                        </div>
+                        <div class="file-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Additional styles for file manager */
+        .file-upload-area {
+            border: 2px dashed #D1D5DB;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: var(--background-color);
+        }
+        
+        .file-upload-area i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .file-upload-area input {
+            display: none;
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .filter-options select,
+        .filter-options input {
+            padding: 8px 12px;
+            border: 1px solid var(--card-color);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .uploaded-files {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .file-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .file-preview {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F3F4F6;
+            overflow: hidden;
+        }
+        
+        .file-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .file-preview i {
+            font-size: 50px;
+        }
+        
+        .file-preview.pdf i {
+            color: #EF4444;
+        }
+        
+        .file-preview.document i {
+            color: #2563EB;
+        }
+        
+        .file-info {
+            padding: 12px;
+        }
+        
+        .file-actions {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 12px 12px;
+        }
+        
+        .file-actions button {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            background-color: #F3F4F6;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+        
+        .file-actions button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for authentication
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }
+            
+            // File upload functionality
+            const fileUpload = document.getElementById('fileUpload');
+            const fileUploadArea = document.querySelector('.file-upload-area');
+            
+            fileUploadArea.addEventListener('click', function() {
+                fileUpload.click();
+            });
+            
+            fileUpload.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    alert(`${this.files.length} file(s) selected. Upload functionality would be implemented here.`);
+                }
+            });
+            
+            // Delete buttons
+            const deleteButtons = document.querySelectorAll('.action-btn.delete');
+            
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const fileItem = this.closest('.file-item');
+                    const fileName = fileItem.querySelector('.file-name').textContent;
+                    
+                    if (confirm(`Are you sure you want to delete "${fileName}"?`)) {
+                        fileItem.remove();
+                    }
+                });
+            });
+            
+            // View buttons
+            const viewButtons = document.querySelectorAll('.action-btn.view');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const fileName = this.closest('.file-item').querySelector('.file-name').textContent;
+                    alert(`Viewing file: ${fileName}`);
+                });
+            });
+        });
+        
+        // Sidebar toggle functionality
+        const body = document.querySelector('.admin-container');
+        const collapseSidebarBtn = document.querySelector('.collapse-sidebar');
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
+        
+        if (collapseSidebarBtn) {
+            collapseSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('collapsed');
+                localStorage.setItem('sidebarCollapsed', body.classList.contains('collapsed'));
+            });
+        }
+        
+        if (toggleSidebarBtn) {
+            toggleSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Check if sidebar was collapsed previously
+        if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            body.classList.add('collapsed');
+        }
+        
+        // User dropdown toggle
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        if (userDropdown) {
+            userDropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        }
+        
+        // Logout functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            });
+        }
+    </script>
+</body>
+</html> 

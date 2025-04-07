@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts - Shariar Arafat Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Edit Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html" class="active">
+                        <i class="fas fa-blog"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        <span>View Site</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="collapse-sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <button class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Blog Posts</h1>
+                </div>
+                
+                <div class="user-dropdown">
+                    <img src="../img/profile.jpg" alt="Shariar Arafat">
+                    <span>Shariar Arafat</span>
+                    <i class="fas fa-chevron-down"></i>
+                    
+                    <div class="user-dropdown-content">
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            Profile
+                        </a>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Posts Management -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Manage Blog Posts</h2>
+                    <button id="addPostBtn" class="primary-btn">
+                        <i class="fas fa-plus"></i> Create New Post
+                    </button>
+                </div>
+                
+                <div class="post-filters">
+                    <div class="filter-group">
+                        <input type="text" id="searchPosts" placeholder="Search posts...">
+                    </div>
+                    <div class="filter-group">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="design">Design</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="tech">Technology</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="published">Published</option>
+                            <option value="draft">Draft</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="post-list">
+                    <table class="post-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="post-title">
+                                        <img src="../img/blog-1.jpg" alt="Blog Post">
+                                        <div>
+                                            <h4>10 Essential Web Development Tools for 2023</h4>
+                                            <small>By Shariar Arafat</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Web Development</td>
+                                <td><span class="status published">Published</span></td>
+                                <td>June 15, 2023</td>
+                                <td>
+                                    <div class="post-actions">
+                                        <button class="action-btn view-post" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn edit-post" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete-post" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="post-title">
+                                        <img src="../img/blog-2.jpg" alt="Blog Post">
+                                        <div>
+                                            <h4>How AI is Changing Digital Marketing Strategies</h4>
+                                            <small>By Shariar Arafat</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Digital Marketing</td>
+                                <td><span class="status published">Published</span></td>
+                                <td>May 28, 2023</td>
+                                <td>
+                                    <div class="post-actions">
+                                        <button class="action-btn view-post" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn edit-post" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete-post" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="post-title">
+                                        <img src="../img/blog-3.jpg" alt="Blog Post">
+                                        <div>
+                                            <h4>UX Design Principles for E-commerce Websites</h4>
+                                            <small>By Shariar Arafat</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Design</td>
+                                <td><span class="status draft">Draft</span></td>
+                                <td>June 5, 2023</td>
+                                <td>
+                                    <div class="post-actions">
+                                        <button class="action-btn view-post" title="View">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn edit-post" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete-post" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Additional styles for blog posts page */
+        .post-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--input-color);
+            color: var(--text-color);
+        }
+        
+        .post-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .post-table th,
+        .post-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .post-table th {
+            background-color: #F9FAFB;
+            font-weight: 600;
+            color: #4B5563;
+        }
+        
+        .post-table tbody tr {
+            background-color: var(--card-color);
+            transition: all 0.2s ease;
+        }
+        
+        .post-table tbody tr:hover {
+            background-color: #F9FAFB;
+        }
+        
+        .post-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .post-title img {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .post-title h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+        
+        .post-title small {
+            color: #6B7280;
+            font-size: 0.8rem;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .status.published {
+            background-color: #D1FAE5;
+            color: #065F46;
+        }
+        
+        .status.draft {
+            background-color: #F3F4F6;
+            color: #4B5563;
+        }
+        
+        .post-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .action-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            background-color: #F3F4F6;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .action-btn.delete-post:hover {
+            background-color: #EF4444;
+        }
+        
+        .primary-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.2s ease;
+        }
+        
+        .primary-btn:hover {
+            background-color: #4338CA;
+        }
+    </style>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for authentication
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn');
+            
+            if (!isLoggedIn) {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }
+            
+            // Add Post button
+            const addPostBtn = document.getElementById('addPostBtn');
+            
+            addPostBtn.addEventListener('click', function() {
+                alert('The post editor would open here. This would be a full-featured editor for creating blog posts.');
+            });
+            
+            // View Post buttons
+            const viewButtons = document.querySelectorAll('.view-post');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const title = row.querySelector('h4').textContent;
+                    
+                    alert(`Viewing post: ${title}`);
+                });
+            });
+            
+            // Edit Post buttons
+            const editButtons = document.querySelectorAll('.edit-post');
+            
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const title = row.querySelector('h4').textContent;
+                    
+                    alert(`Editing post: ${title}`);
+                });
+            });
+            
+            // Delete Post buttons
+            const deleteButtons = document.querySelectorAll('.delete-post');
+            
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const title = row.querySelector('h4').textContent;
+                    
+                    if (confirm(`Are you sure you want to delete the post "${title}"?`)) {
+                        row.remove();
+                    }
+                });
+            });
+            
+            // Filtering functionality
+            const searchInput = document.getElementById('searchPosts');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const statusFilter = document.getElementById('statusFilter');
+            const tableRows = document.querySelectorAll('.post-table tbody tr');
+            
+            function filterPosts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const category = categoryFilter.value;
+                const status = statusFilter.value;
+                
+                tableRows.forEach(row => {
+                    const titleText = row.querySelector('h4').textContent.toLowerCase();
+                    const categoryText = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                    const statusText = row.querySelector('.status').classList.contains('published') ? 'published' : 'draft';
+                    
+                    // Check if row matches all filters
+                    const matchesSearch = titleText.includes(searchTerm);
+                    const matchesCategory = category === 'all' || categoryText.includes(category.replace('-', ' '));
+                    const matchesStatus = status === 'all' || statusText === status;
+                    
+                    // Show/hide row based on filters
+                    if (matchesSearch && matchesCategory && matchesStatus) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Add event listeners for filters
+            searchInput.addEventListener('input', filterPosts);
+            categoryFilter.addEventListener('change', filterPosts);
+            statusFilter.addEventListener('change', filterPosts);
+        });
+        
+        // Sidebar toggle functionality
+        const body = document.querySelector('.admin-container');
+        const collapseSidebarBtn = document.querySelector('.collapse-sidebar');
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
+        
+        if (collapseSidebarBtn) {
+            collapseSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('collapsed');
+                localStorage.setItem('sidebarCollapsed', body.classList.contains('collapsed'));
+            });
+        }
+        
+        if (toggleSidebarBtn) {
+            toggleSidebarBtn.addEventListener('click', function() {
+                body.classList.toggle('menu-open');
+            });
+        }
+        
+        // Check if sidebar was collapsed previously
+        if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            body.classList.add('collapsed');
+        }
+        
+        // User dropdown toggle
+        const userDropdown = document.querySelector('.user-dropdown');
+        
+        if (userDropdown) {
+            userDropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        }
+        
+        // Logout functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            });
+        }
+    </script>
+</body>
+</html> 
